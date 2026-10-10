@@ -1,13 +1,13 @@
-cd /workspaces
-git clone https://github.com/tuna1710/openhands-workspace.git
-cd openhands-workspace
-
-cat << 'EOF' > start.sh
 #!/bin/bash
+
+# 1. Cấp quyền truy cập Docker socket
 sudo chmod 666 /var/run/docker.sock
+
+# 2. Tạo thư mục cấu hình OpenHands
 mkdir -p ~/.openhands
 chmod 777 ~/.openhands
 
+# 3. Khởi chạy OpenHands container
 docker run -d \
     -e AGENT_SERVER_IMAGE_REPOSITORY=ghcr.io/openhands/agent-server \
     -e AGENT_SERVER_IMAGE_TAG=1.36.0-python \
@@ -20,10 +20,4 @@ docker run -d \
     --name openhands-app \
     docker.openhands.dev/openhands/openhands:latest
 
-echo "OpenHands đang khởi động! Đợi 15-20s rồi mở cổng 3000."
-EOF
-
-chmod +x start.sh
-git add start.sh
-git commit -m "feat: add openhands start script"
-git push origin main
+echo "OpenHands đang khởi động ngầm! Vui lòng đợi khoảng 20 giây rồi mở cổng 3000."
