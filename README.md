@@ -12,6 +12,9 @@ Bấm vào nút dưới đây để khởi tạo ngay môi trường làm việc
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tuna1710/openhands-workspace)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tuna1710/openhands-workspace/blob/main/openhands_colab.ipynb)
+
+
 ---
 
 ## 📖 Hướng dẫn sử dụng từng bước
